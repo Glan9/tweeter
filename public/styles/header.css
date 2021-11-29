@@ -1,0 +1,19 @@
+header.profile {
+  height: 400px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1;
+  position: relative;
+  top: -120px;
+
+  padding-top: 72px;
+
+  background-color: #98d8f0;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
