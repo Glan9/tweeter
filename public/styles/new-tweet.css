@@ -53,10 +53,7 @@ main.container {
 .new-tweet {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: normal;
-  justify-content: normal;
+  display: none;
 }
 
 .new-tweet label {
@@ -72,8 +69,10 @@ main.container {
 }
 
 .new-tweet form textarea {
+  background-color: transparent;
   border: none;
   border-bottom: 5px solid #545149;
+  resize: none;
 }
 
 .new-tweet form div {

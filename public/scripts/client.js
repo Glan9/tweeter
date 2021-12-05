@@ -6,12 +6,14 @@
 
 $(document).ready(function() {
 
+  // Get escaped text for displaying in HTML
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };  
 
+  // Create HTML for a tweet based on tweetData object
   const createTweetElement = function(tweetData) {
     const $tweet = $(`<article class="tweet">
     <header>
@@ -37,6 +39,7 @@ $(document).ready(function() {
     return $tweet;
   }
 
+  // Render a list of tweet objects on the page
   const renderTweets = function(tweets) {
     $('#tweets-container').empty(); // clear the tweets before rendering. so that we can use this load after submitting a new tweet
     for (const tweet of tweets){
@@ -44,6 +47,13 @@ $(document).ready(function() {
     }
   }
 
+  // Write new tweet button opens the form
+  $('.nav-new-tweet').on('click', function(event){
+    console.log('test');
+    $('.new-tweet').slideDown(500);
+  });
+
+  // Validate/submit a new tweet via AJAX
   $('#new-tweet-form').submit(function(event) {
     event.preventDefault();
 
@@ -71,6 +81,7 @@ $(document).ready(function() {
     }
   })
 
+  // Load and render all tweets from the server
   const loadTweets = function() {
     $.ajax('/tweets/', {
       method: 'GET'

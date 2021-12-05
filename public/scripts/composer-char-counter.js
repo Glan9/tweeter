@@ -1,3 +1,5 @@
+// Manage the character counter in the new tweet form while typing
+
 $(document).ready(function() {
   $('#tweet-text').on('input', function() {
     const newCount = 140 - $(this).val().length;

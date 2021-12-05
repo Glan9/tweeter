@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0 auto;
 
-  @include layout.flex($direction: column);
+  display: none;
 }
 
 .new-tweet label {
@@ -18,8 +18,10 @@
 }
 
 .new-tweet form textarea {
+  background-color: transparent;
   border: none;
   border-bottom: 5px solid layout.$line-color;
+  resize: none;
 }
 
 .new-tweet form div {
