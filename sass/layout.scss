@@ -25,6 +25,20 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+$tweeter-blue: #4056A1;
+$line-color: #545149;
+$error-color: red;
+
+$bungee: "Bungee", "sans-serif";
+
+@mixin flex($direction: row, $align: normal, $justify: normal) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+ 
 main.container {
   width: 90%;
   margin: 10px auto;
@@ -32,14 +46,12 @@ main.container {
 }
 
 .main-page {
-  display: flex;
-  flex-direction: column;
+  @include flex($direction: column);
 }
 
 @media (min-width:1024px) {
   .main-page {
-    flex-direction: row;
-    justify-content: space-around;
+    @include flex($justify: space-around);
 
     margin-top: 100px;
   }

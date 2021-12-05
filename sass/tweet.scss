@@ -1,21 +1,21 @@
+@use 'layout';
+
 .tweet {
-  border: 5px solid #545149;
+  border: 5px solid layout.$line-color;
   padding: 10px;
   margin: 1em 0;
 }
 
 .tweet header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  @include layout.flex($align: center, $justify: space-between);
 
   padding: 5px;
 }
 
 .tweet header .user-display {
-  display: flex;
-  align-items: center;
+  @include layout.flex($align: center);
 }
 
 .tweet header .user-display * {
@@ -36,15 +36,13 @@
   font-weight: bold;
   padding: 15px;
 
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid layout.$line-color;
 }
 
 .tweet footer {
   width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include layout.flex($align: center, $justify: space-between);
 
   padding: 10px 15px;
 }
@@ -54,7 +52,7 @@
 }
 
 .tweet .action-buttons {
-  color: #4056A1;
+  color: layout.$tweeter-blue;
 }
 
 .tweet .action-buttons i:hover {

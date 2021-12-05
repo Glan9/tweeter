@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,7 +14,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -24,7 +24,6 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main.container {
   width: 90%;
   margin: 10px auto;
@@ -34,13 +33,16 @@ main.container {
 .main-page {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .main-page {
+    display: flex;
     flex-direction: row;
+    align-items: normal;
     justify-content: space-around;
-
     margin-top: 100px;
   }
 

@@ -1,9 +1,10 @@
+@use 'layout';
+
 .new-tweet {
   width: 100%;
   margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  @include layout.flex($direction: column);
 }
 
 .new-tweet label {
@@ -13,28 +14,25 @@
 .new-tweet form {
   height: 160px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include layout.flex($direction: column, $justify: space-between);
 }
 
 .new-tweet form textarea {
   border: none;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid layout.$line-color;
 }
 
 .new-tweet form div {
   width: 100%;
 
-  display: flex;
-  justify-content: space-between;
+  @include layout.flex($justify: space-between);
 }
 
 .new-tweet form button {
-  background-color: #4056A1;
+  background-color: layout.$tweeter-blue;
   color: #fff;
 
-  font-family: "Bungee", "sans-serif";
+  font-family: layout.$bungee;
 
   border: none;
 
@@ -42,14 +40,18 @@
 }
 
 .counter {
-  font-family: "Bungee", "sans-serif";
+  font-family: layout.$bungee;
+
+  /* so that the error message stays in the same centred spot, we want this to have a fixed width */
+  width: 10%;
+  text-align: right;
 }
 
 .invalid {
-  color: red;
+  color: layout.$error-color;
 }
 
 .error-message {
   display: none;
-  color: red;
+  color: layout.$error-color;
 }

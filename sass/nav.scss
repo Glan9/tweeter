@@ -1,37 +1,38 @@
+@use 'layout';
+
+$nav-text-color: #fff;
+
 nav {
   height: 120px;
   width: 100%;
   
-  color: #fff;
+  color: $nav-text-color;
   padding: 0 1.5em 0 1.5em;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include layout.flex($align: center, $justify: space-between);
 
   /*z-index: 2;*/
   position: absolute;
   top: 0px;
-}
 
-nav span {
-  font-family: "Bungee", "sans-serif";
-  font-size: 1.5em;
-}
+  span {
+    font-family: layout.$bungee;
+    font-size: 1.5em;
+  }
 
-.nav-new-tweet {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .nav-new-tweet {
+    @include layout.flex($direction: column, $align: center);
+  }
 
-.fa-angle-double-down {
-  color: red;
+  .fa-angle-double-down {
+    color: red;
+  }
+
 }
 
 @media (min-width:1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: layout.$tweeter-blue;
     position: sticky;
   }
 }

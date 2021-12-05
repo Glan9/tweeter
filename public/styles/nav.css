@@ -1,35 +1,83 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", "sans-serif";
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main.container {
+  width: 90%;
+  margin: 10px auto;
+  background-color: #f4f1ec;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+}
+
+@media (min-width: 1024px) {
+  .main-page {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: space-around;
+    margin-top: 100px;
+  }
+
+  .tweets-section {
+    width: 60%;
+  }
+}
 nav {
   height: 120px;
   width: 100%;
-  
   color: #fff;
   padding: 0 1.5em 0 1.5em;
-
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-
+  justify-content: space-between;
   /*z-index: 2;*/
   position: absolute;
   top: 0px;
 }
-
 nav span {
   font-family: "Bungee", "sans-serif";
   font-size: 1.5em;
 }
-
-.nav-new-tweet {
+nav .nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: normal;
 }
-
-.fa-angle-double-down {
+nav .fa-angle-double-down {
   color: red;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   nav {
     background-color: #4056A1;
     position: sticky;
