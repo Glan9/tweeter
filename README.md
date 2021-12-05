@@ -21,4 +21,4 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Screenshot of desktop mode"](https://github.com/Glan9/tweeter/blob/master/docs/tweeter1.JPG)
 
-!["Screenshot of mobile mode"](https://github.com/Glan9/tweeter/blob/master/docs/tweeter1.JPG)
+!["Screenshot of mobile mode"](https://github.com/Glan9/tweeter/blob/master/docs/tweeter2.JPG)
