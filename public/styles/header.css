@@ -37,6 +37,17 @@ main.container {
   justify-content: normal;
 }
 
+footer.to-top-btn {
+  width: 100%;
+  background-color: #4056A1;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+}
+
 @media (min-width: 1024px) {
   .main-page {
     display: flex;

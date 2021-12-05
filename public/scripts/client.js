@@ -47,10 +47,20 @@ $(document).ready(function() {
     }
   }
 
-  // Write new tweet button opens the form
+  // Write new tweet button opens/closes the form
   $('.nav-new-tweet').on('click', function(event){
-    console.log('test');
-    $('.new-tweet').slideDown(500);
+    if ($('.new-tweet').is(':hidden')) {
+      $('.new-tweet').slideDown(500);
+      $('#tweet-text').focus();
+    } else {
+      $('#tweet-text').val('');
+      $('.new-tweet').slideUp(500);
+    }
+  });
+
+  // Button brings you to top of page
+  $('.to-top-btn').on('click', function(event){
+    window.scrollTo(0, 0);
   });
 
   // Validate/submit a new tweet via AJAX
@@ -77,6 +87,7 @@ $(document).ready(function() {
         data:   $(this).serialize()
       }).then(function(result) {
         loadTweets();
+        $('#tweet-text').val('');
       });
     }
   })

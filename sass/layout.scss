@@ -25,6 +25,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+$bg-color: #f4f1ec;
 $tweeter-blue: #4056A1;
 $line-color: #545149;
 $error-color: red;
@@ -42,11 +43,25 @@ $bungee: "Bungee", "sans-serif";
 main.container {
   width: 90%;
   margin: 10px auto;
-  background-color: #f4f1ec;
+  background-color: $bg-color;
 }
 
 .main-page {
   @include flex($direction: column);
+}
+
+footer.to-top-btn {
+  width: 100%;
+  background-color: $tweeter-blue;
+  color: #fff;
+
+  display: flex;
+  justify-content: flex-end;
+
+  position: fixed;
+  bottom: 0;
+
+  padding: 5px;
 }
 
 @media (min-width:1024px) {
